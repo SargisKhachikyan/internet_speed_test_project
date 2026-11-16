@@ -1,4 +1,3 @@
-
 # Internet Speed Test
 
 A simple console application written in Dart that measures download speed.
@@ -10,6 +9,7 @@ A simple console application written in Dart that measures download speed.
 - Measures the average request time.
 - Calculates total downloaded data.
 - Calculates average download speed.
+- Supports HTTP and HTTPS URLs.
 
 ## Requirements
 
@@ -20,8 +20,14 @@ A simple console application written in Dart that measures download speed.
 Clone the repository:
 
 ```bash
-git clone https://github.com/SargisKhachikyan/internet_speed_test.git
-cd internet_speed_test
+git clone https://github.com/SargisKhachikyan/internet_speed_test_project.git
+cd internet_speed_test_project
+```
+
+Install dependencies:
+
+```bash
+dart pub get
 ```
 
 ## Usage
@@ -40,4 +46,10 @@ Replace the URL with the address of the file you want to download.
 - Downloaded data: megabytes (MB).
 - Download speed: megabytes per second (MB/s).
 
-Download speed is calculated by dividing the total downloaded data by the total time of all requests.
+Megabytes are calculated using the decimal system (1 MB = 1,000,000 bytes).
+
+Download speed is calculated by dividing the total downloaded data by the total time of all 10 requests.
+
+## Error Handling
+
+The application handles invalid URLs, unsupported protocols, HTTP errors, and request timeouts.
